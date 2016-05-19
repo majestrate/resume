@@ -4,6 +4,7 @@
   Software Engineer
 
   Contact:
+  
     Email:    <ampernand+cv@gmail.com>
     XMPP:     jeff@i2p.rocks
     Github:   https://github.com/majestrate
@@ -20,17 +21,28 @@
   Acquainted Technologies:
 
     Web Frontend:
+
       JavaScript, JQuery, HTML5, CSS3, JSP
+
     Middleware:
+
       Flask, Django, Twisted, Gorilla, Java Servlet 2.0
+      
     ORM:
+     
       SqlAlchemy, Xorm, Hibernate
+      
     Database Administration:
+    
       SQLite3, MySQL, PostgreSQL, Redis, MongoDB
+      
     Languages:
+    
       Go 1.6, Python (2.x, 3.x), Ruby, ANSI C, C++ 11, Java 8, PHP, Node.js
       CMake, Scons, Makefile, sh/zsh/bash
+      
     Server Administration:
+    
       nginx, apache, cron, systemd, git, subversion, monotone, munin
 
   Expertise:
