@@ -1,3 +1,3 @@
 Resume related resources
 
-[resume](cv.txt)
+[resume](cv.md)
