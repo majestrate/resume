@@ -1,0 +1,17 @@
+{% extends "base.jinja2" %}
+
+{% block overrideStyle %}
+
+  html, body {
+    font-family: sans-serif;
+  }
+  
+  code, pre {
+    font-family: monospace;
+  }
+{% endblock %}
+
+
+{% block bodyContent %}
+  {{body | safe }}
+{% endblock %}

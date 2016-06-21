@@ -1,0 +1,9 @@
+# emacs files
+*~
+*\#*
+
+# rendered files
+*.html
+
+# virtual env
+v/
