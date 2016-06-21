@@ -9,9 +9,57 @@
   code, pre {
     font-family: monospace;
   }
+
+  .container {
+    margin-left: 20%;
+    width: 65%;
+    display: flex;
+  }
+
+  .content {
+    width: 85%;
+  }
+  
+  code {
+    color: grey;
+    background: lightgrey;
+  }
+
+  li {
+    padding-bottom: 10px;
+  }
+  
+  img {
+    max-width: 200px;
+  }
+
+  .header {
+    justify-content: center;
+    flex-direction: row;
+    padding-right: 3em;
+    width: 35%;
+  }
+
+  .entry {
+    
+  }
+  
 {% endblock %}
 
 
 {% block bodyContent %}
-  {{body | safe }}
+  <div class="header">
+    <div class="entry">
+      {{header | safe }}
+    </div>
+    <div class="entry">
+      <img src="me.jpeg" alt="portrait" />
+    </div>
+    <div class="entry">
+      {{about | safe }}
+    </div>
+  </div>
+  <div class="content">
+    {{body | safe }}
+  </div>
 {% endblock %}

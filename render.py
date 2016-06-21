@@ -14,9 +14,14 @@ def renderFile(t, fname, w):
         w.write(fullhtml)
 
 def main():
-    t = jinja2.Environment(loader=jinja2.FileSystemLoader("templates"))
-    with open('cv.html', 'w') as f:
-        renderFile(t.get_template("resume.jinja2"), 'README.md', f)
-
+    env = jinja2.Environment(loader=jinja2.FileSystemLoader("templates"))
+    t = env.get_template('resume.jinja2')
+    with open('cv.html', 'w') as w:
+        parts = dict()
+        for f in ('header', 'body', 'about'):
+            with open('{}.md'.format(f)) as r:
+                parts[f] = markdown.markdown(r.read(), output_format='html5')
+        w.write(t.render(**parts))
+                
 if __name__ == "__main__":
     main()
