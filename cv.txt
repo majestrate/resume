@@ -5,7 +5,7 @@
 
   Contact:
   
-    Email:    <ampernand+cv@gmail.com>
+    Email:    <jeff@i2p.rocks>
     XMPP:     jeff@i2p.rocks
     Github:   https://github.com/majestrate
     Keybase:  https://keybase.io/ampernand
