@@ -7,11 +7,11 @@
 
 #### Languages
 
-* Go 1.6
+* Go 
 * Python (2.x, 3.x)
 * ANSI C
 * C++ 
-* Java 8
+* Java
 * PHP
 * Node.js
 * sh/zsh/bash
