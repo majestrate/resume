@@ -1,7 +1,6 @@
 # resume
 
-
-## building
+files for building resume
 
 ### dependancies
 
@@ -9,3 +8,5 @@
 * gnu make
 
 to build cv.html run `make`
+
+To view resume see [here](https://i2p.rocks/cv.html)
