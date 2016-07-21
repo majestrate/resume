@@ -1,11 +1,11 @@
-all: setup render
+all: render
 
 setup:
 	pyvenv v
 	v/bin/pip install -r requirements.txt
 
-render:
+render: setup
 	v/bin/python render.py
 
 clean:
-	rm -fr v *.html
+	rm -f *.html
