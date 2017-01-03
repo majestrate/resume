@@ -5,6 +5,8 @@ A long time computer programmer hobbiest, hard working, fun and inspiring cool g
 
 Dedicated community member and contributor to [I2P](https://geti2p.net) since 2013.
 
+Core Contributor to [http://i2pd.website](i2pd).
+
 Prefers to align memory, not divs.
 
 ### Contact

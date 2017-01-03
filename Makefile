@@ -12,3 +12,6 @@ clean:
 
 distclean: clean
 	rm -rf v
+
+upload: render
+	scp cv.html root@i2p.rocks:/var/www/html
