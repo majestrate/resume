@@ -1,4 +1,3 @@
-# Resumé
 
 Jeff Becker
 

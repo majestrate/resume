@@ -2,7 +2,10 @@
 ## About me
 
 A long time computer programmer hobbiest, hard working, fun and inspiring cool guy.
-Dedicated community member and contributor to I2P since 2012.
+
+Dedicated community member and contributor to [I2P](https://geti2p.net) since 2013.
+
+Prefers to align memory, not divs.
 
 ### Contact
 
