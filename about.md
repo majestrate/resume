@@ -11,6 +11,6 @@ Prefers to align memory, not divs.
 
 ### Contact
 
-* Email:  `jeff.becker@protonmail.com`
+* Email:  `jeff@i2p.rocks`
 * XMPP:   `jeff@i2p.rocks`
 * [Github](https://github.com/majestrate): `https://github.com/majestrate`
