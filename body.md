@@ -1,10 +1,9 @@
 ### Experience
 
+* Core Developer for [i2pd](http://i2pd.website) since 2015.
 * System Administration of Linux Servers and LXC
 * Full Stack Web Development in Go and Python
 * x86 Systems Programming in C/C++ for GNU Linux
-* Core Developer for [i2pd](http://i2pd.website) since 2015.
-
 
 #### Languages
 
