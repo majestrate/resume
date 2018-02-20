@@ -13,4 +13,4 @@ Prefers to align memory, not divs.
 
 * Email:  `jeff@i2p.rocks`
 * XMPP:   `jeff@i2p.rocks`
-* [Github](https://github.com/majestrate): `https://github.com/majestrate`
+* [Github](https://github.com/majestrate)
