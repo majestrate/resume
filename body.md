@@ -14,5 +14,4 @@
 #### Education
 
 * Attended Massbay Community College Computer Science Program (2009-2014)
-
 * Graduated Newton North High School (Class of 2008)
