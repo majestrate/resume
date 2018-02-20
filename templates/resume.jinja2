@@ -43,11 +43,16 @@
   .entry {
     
   }
+
+  .footer {
+    color: grey;
+  }
   
 {% endblock %}
 
 
 {% block bodyContent %}
+<div class="container">
   <div class="header">
     <div class="entry">
       {{header | safe }}
@@ -59,4 +64,8 @@
   <div class="content">
     {{body | safe }}
   </div>
+</div>
+<div class="footer">
+  {{footer | safe}}
+</div>
 {% endblock %}
