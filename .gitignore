@@ -9,4 +9,7 @@
 v/
 
 # build dir
-build
+dist
+
+# js bloat
+node_modules
