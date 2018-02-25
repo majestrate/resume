@@ -1,6 +1,6 @@
 
 Jeff Becker
 
-Boston MA, USA
+Boston, MA
 
 Software Engineer
