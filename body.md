@@ -1,18 +1,22 @@
 ### Experience
 
-* Core Developer for [i2pd](http://i2pd.website) since 2015.
-* System Administration of Linux Servers and LXC
-* Full Stack Web Development in Go and Python
-* x86 Systems Programming in C/C++ for GNU Linux
+* Core Developer for [i2pd](http://i2pd.website) (2016-present), x86 and ARM Systems Programming in C/C++ for Linux, (Topics: Cryptography, P2P, Anonymizers)
+* Full Stack Web Development in Go and Python using PostgreSQL in FOSS (2015-present)
+* Former part-time devops at clipfile.com (2015)
 
-#### Languages
+#### Language Proficiency
 
 * Go
 * Python (2.x, 3.x)
 * C for x86 and ARM
 * C++ 11/14
+* SQL
+
+#### OS Proficiency
+
+* Linux ( 9 years ) Ubuntu, Debian.
+
 
 #### Education
 
 * Attended Massbay Community College Computer Science Program (2009-2014)
-* Graduated Newton North High School (Class of 2008)

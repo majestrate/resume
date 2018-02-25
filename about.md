@@ -1,7 +1,7 @@
 
 ## About me
 
-A long time computer programmer hobbiest, hard working autodidact and inspiring cool guy.
+Life long Computer programmer, hard working self-learner.
 
 Prefers to align memory, not divs.
 
