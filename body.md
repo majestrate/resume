@@ -14,7 +14,7 @@
 
 #### OS Proficiency
 
-* Linux (2008-present) Ubuntu, Debian.
+* Linux, specfically Ubuntu and Debian (2008-present)
 * GNU/Emacs (2014-present)
 
 #### Education
