@@ -9,7 +9,7 @@
 * Go
 * Python (2.x, 3.x)
 * C for x86 and ARM
-* C++ 11/14
+* C++ 11/14 for x86
 * SQL
 
 #### OS Proficiency
