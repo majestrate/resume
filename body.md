@@ -1,6 +1,6 @@
 ### Experience
 
-* Core Developer for [i2pd](http://i2pd.website) (2016-present), x86 and ARM Systems Programming in C/C++ for Linux, (Topics: Cryptography, P2P, Anonymizers)
+* Core Developer for [i2pd](http://i2pd.website) (2016-present), x86 and ARM Systems Programming in C/C++ for Linux, (Topics: Cryptography, P2P, Anonymity Networks)
 * Full Stack Web Development in Go and Python using PostgreSQL in FOSS (2015-present)
 * Former part-time devops at clipfile.com (2015)
 
