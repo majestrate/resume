@@ -7,3 +7,6 @@
 
 # virtual env
 v/
+
+# build dir
+build
