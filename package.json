@@ -4,9 +4,8 @@
   "description": "resume",
   "main": "render-pdf.js",
   "dependencies": {
-    "markdown-pdf": "^8.1.1",
-    "remarkable": "^1.7.1",
-    "remarkable-classy": "^0.0.1"
+    "bulma": "^0.6.2",
+    "html-pdf": "^2.2.0"
   },
   "private": true,
   "devDependencies": {},

@@ -1,15 +1,14 @@
 
 V = v
 TMPL_HTML = resume.html.jinja2
-TMPL_MD = resume.md.jinja2
 BUILD = dist
-MD = $(BUILD)/resume.md
 HTML = $(BUILD)/cv.html
 PDF = $(BUILD)/résumé.pdf
 PY = $(V)/bin/python
 PIP = $(V)/bin/pip
 MDPDF = markdown-pdf
 NPM = node_modules
+CSS = $(NPM)/bulma/css/bulma.css
 NODE = node
 
 all: assemble
@@ -23,16 +22,13 @@ $(V):
 	python3 -m venv $(V)
 	$(PIP) install -r requirements.txt
 
-$(MD): $(V) $(BUILD)
-	$(PY) render.py $(TMPL_MD) $(MD)
-
 pdf: $(PDF)
 
 $(NPM):
 	npm install
 
-$(PDF): $(MD) $(NPM)
-	$(NODE) render-pdf.js $(PDF) $(MD)
+$(PDF): $(HMTL) $(NPM)
+	$(NODE) render-pdf.js $(PDF) $(HTML) $(CSS)
 
 $(HTML): $(V) $(BUILD)
 	$(PY) render.py $(TMPL_HTML) $(HTML)

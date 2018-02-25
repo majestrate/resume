@@ -1,19 +1,13 @@
 #!/usr/bin/env node
-var markdownpdf = require("markdown-pdf");
-
-var options = {
-    remarkable: {
-        html: true,
-        breaks: true,
-        plugins: [ require('remarkable-classy') ],
-		syntax: [ 'footnote', 'sup', 'sub' ]
-    }
-};
-
+const pdf = require("html-pdf");
+const fs = require("fs");
 
 const outfile = process.argv[2];
 const infile = process.argv[3];
 
-markdownpdf(options)
-  .from(infile)
-  .to(outfile);
+const html = fs.readFileSync(infile, 'utf-8');
+
+pdf.create(html).toStream(function(err, stream){
+  if(err) throw err;
+  stream.pipe(fs.createWriteStream(outfile));
+});
