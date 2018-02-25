@@ -8,7 +8,7 @@ PY = $(V)/bin/python
 PIP = $(V)/bin/pip
 MDPDF = markdown-pdf
 NPM = node_modules
-NODE = node
+NODE = $(NPM)/phantomjs/bin/phantomjs
 
 all: assemble
 
@@ -26,8 +26,8 @@ pdf: $(PDF)
 $(NPM):
 	npm install
 
-$(PDF): $(HMTL) $(NPM)
-	$(NODE) render-pdf.js $(PDF) $(HTML)
+$(PDF): upload-html $(NPM)
+	$(NODE) render-pdf.js $(PDF) https://i2p.rocks/cv.html
 
 $(HTML): $(V) $(BUILD)
 	$(PY) render.py $(TMPL_HTML) $(HTML)
@@ -38,5 +38,10 @@ clean:
 distclean: clean
 	rm -rf $(V) $(NPM)
 
-upload: $(HTML) $(PDF)
-	scp $(HTML) $(PDF) root@i2p.rocks:/var/www/html
+upload: upload-pdf upload-html
+
+upload-html: $(HTML)
+	scp $(HTML) root@i2p.rocks:/var/www/html
+
+upload-pdf: $(PDF)
+	scp $(PDF) root@i2p.rocks:/var/www/html

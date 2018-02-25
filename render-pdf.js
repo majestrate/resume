@@ -1,15 +1,17 @@
-#!/usr/bin/env node
-const pdf = require("phantom-html2pdf");
-const fs = require("fs");
-
-const outfile = process.argv[2];
-const infile = process.argv[3];
+#!/usr/bin/env phantomjs
+const system = require('system');
+const outfile = system.args[2];
+const url = system.args[3];
 
 const options = {
-  html: infile
+  html: url
 };
 
-pdf.convert(options, function(err, result) {
-  if (err) throw err;
-  result.toFile(outfile, function() {});
+var webPage = require('webpage');
+var page = webPage.create();
+
+page.viewportSize = { width: 1920, height: 1080 };
+page.open(url, function start(status) {
+  page.render(outfile, {format: 'pdf'});
+  phantom.exit();
 });
