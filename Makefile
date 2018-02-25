@@ -10,6 +10,7 @@ PY = $(V)/bin/python
 PIP = $(V)/bin/pip
 MDPDF = markdown-pdf
 NPM = node_modules
+NODE = node
 
 all: assemble
 
@@ -31,7 +32,7 @@ $(NPM):
 	npm install
 
 $(PDF): $(MD) $(NPM)
-	node render-pdf.js $(PDF) $(MD)
+	$(NODE) render-pdf.js $(PDF) $(MD)
 
 $(HTML): $(V) $(BUILD)
 	$(PY) render.py $(TMPL_HTML) $(HTML)

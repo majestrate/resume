@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var markdownpdf = require("markdown-pdf");
 
 var options = {
@@ -9,8 +10,9 @@ var options = {
     }
 };
 
-const infile = process.argv[1];
+
 const outfile = process.argv[2];
+const infile = process.argv[3];
 
 markdownpdf(options)
   .from(infile)
