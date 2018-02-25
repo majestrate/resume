@@ -15,7 +15,7 @@
 #### OS Proficiency
 
 * Linux ( 9 years ) Ubuntu, Debian.
-
+* GNU/Emacs ( 4 years )
 
 #### Education
 
