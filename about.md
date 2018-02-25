@@ -1,7 +1,7 @@
 
 ## About me
 
-Life long Computer programmer, hard working self-learner.
+Life long Computer Programmer, hard working self-learner.
 
 Prefers to align memory, not divs.
 
