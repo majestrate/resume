@@ -4,8 +4,7 @@
   "description": "resume",
   "main": "render-pdf.js",
   "dependencies": {
-    "phantom-html2pdf": "4.0.1",
-    "phantomjs": "^2.1.7"
+    "phantomjs2": "^2.1.7"
   },
   "private": true,
   "devDependencies": {},

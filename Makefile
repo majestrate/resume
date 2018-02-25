@@ -8,7 +8,7 @@ PY = $(V)/bin/python
 PIP = $(V)/bin/pip
 MDPDF = markdown-pdf
 NPM = node_modules
-NODE = $(NPM)/phantomjs/bin/phantomjs
+NODE = $(NPM)/phantomjs2/bin/phantomjs
 
 all: assemble
 
