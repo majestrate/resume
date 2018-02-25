@@ -4,8 +4,7 @@
   "description": "resume",
   "main": "render-pdf.js",
   "dependencies": {
-    "bulma": "^0.6.2",
-    "html-pdf": "^2.2.0"
+    "phantom-html2pdf": "4.0.1"
   },
   "private": true,
   "devDependencies": {},

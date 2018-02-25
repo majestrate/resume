@@ -8,7 +8,6 @@ PY = $(V)/bin/python
 PIP = $(V)/bin/pip
 MDPDF = markdown-pdf
 NPM = node_modules
-CSS = $(NPM)/bulma/css/bulma.css
 NODE = node
 
 all: assemble
@@ -28,7 +27,7 @@ $(NPM):
 	npm install
 
 $(PDF): $(HMTL) $(NPM)
-	$(NODE) render-pdf.js $(PDF) $(HTML) $(CSS)
+	$(NODE) render-pdf.js $(PDF) $(HTML)
 
 $(HTML): $(V) $(BUILD)
 	$(PY) render.py $(TMPL_HTML) $(HTML)

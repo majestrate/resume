@@ -1,13 +1,15 @@
 #!/usr/bin/env node
-const pdf = require("html-pdf");
+const pdf = require("phantom-html2pdf");
 const fs = require("fs");
 
 const outfile = process.argv[2];
 const infile = process.argv[3];
 
-const html = fs.readFileSync(infile, 'utf-8');
+const options = {
+  html: infile
+};
 
-pdf.create(html).toStream(function(err, stream){
-  if(err) throw err;
-  stream.pipe(fs.createWriteStream(outfile));
+pdf.convert(options, function(err, result) {
+  if (err) throw err;
+  result.toFile(outfile, function() {});
 });
