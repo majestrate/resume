@@ -1,10 +1,4 @@
 
-## About me
-
-Professional C++ software engineer.
-
-Prefers to align memory, not divs.
-
 ### Contact
 
 * Email:  `jeff@lokinet.io`
