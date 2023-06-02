@@ -6,7 +6,9 @@ PY = $(V)/bin/python
 PIP = $(V)/bin/pip
 NODE = npm exec node
 
-all: $(HTML) $(PDF)
+all: compile
+
+compile: $(HTML) $(PDF)
 
 $(BUILD):
 	mkdir -p $(BUILD)
@@ -32,3 +34,7 @@ clean:
 
 distclean: clean
 	rm -rf $(BUILD) $(PWD)/node_modules
+
+
+upload: compile
+	rsync --progress $(BUILD)/cv.* root@blog:/var/www/html/
