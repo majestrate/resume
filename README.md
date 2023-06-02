@@ -4,9 +4,8 @@ files for building resume
 
 ### dependancies
 
-* python 3.5
-* gnu make
+* asdf
+* gmake
 
-to build cv.html run `make`
+build with `make`
 
-To view resume see [here](https://i2p.rocks/cv.html)

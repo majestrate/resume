@@ -1,20 +1,22 @@
 import jinja2
 import markdown
 import sys
+import glob
 
-def main(infname, outfname):
-    env = jinja2.Environment(loader=jinja2.FileSystemLoader('.'))
-    t = env.get_template(infname)
-    if outfname.endswith('.html'):
-        with open(outfname, 'w') as w:
-            parts = dict()
-            for f in ('header', 'body', 'about', 'footer'):
-                with open('{}.md'.format(f)) as r:
-                    parts[f] = markdown.markdown(r.read(), output_format='html5')
-            w.write(t.render(**parts))
-    elif outfname.endswith('.md'):
-        with open(outfname, 'w') as w:
-            w.write(t.render())
-                
-if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+
+outfname = sys.argv[1]
+
+# set up jinja2 templates
+env = jinja2.Environment(loader=jinja2.FileSystemLoader("."))
+html_template = env.get_template("resume.html.jinja2")
+
+# render markdown fragments to html
+parts = dict()
+for part_file in glob.glob("*.md"):
+    with open(part_file) as f:
+        part_name = part_file.split(".")[0]
+        parts[part_name] = markdown.markdown(f.read(), output_format="html5")
+
+# render template with final html document containing rendered markdown
+with open(outfname, "w") as w:
+    w.write(html_template.render(**parts))

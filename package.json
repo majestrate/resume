@@ -1,13 +1,12 @@
 {
   "name": "jeff-resume",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "resume",
   "main": "render-pdf.js",
   "dependencies": {
-    "phantomjs2": "^2.1.7"
+    "puppeteer": "^20.5.0"
   },
   "private": true,
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

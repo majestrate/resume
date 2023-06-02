@@ -1,47 +1,34 @@
-
-V = v
-TMPL_HTML = resume.html.jinja2
-BUILD = dist
+BUILD = $(PWD)/build
 HTML = $(BUILD)/cv.html
-PDF = $(BUILD)/résumé.pdf
+PDF = $(BUILD)/cv.pdf
+V = $(BUILD)/v
 PY = $(V)/bin/python
 PIP = $(V)/bin/pip
-MDPDF = markdown-pdf
-NPM = node_modules
-NODE = $(NPM)/phantomjs2/bin/phantomjs
+NODE = npm exec node
 
-all: assemble
-
-assemble: $(HTML) $(PDF)
+all: $(HTML) $(PDF)
 
 $(BUILD):
 	mkdir -p $(BUILD)
 
-$(V):
+$(V) $(PIP) node_modules:
+	asdf install
 	python3 -m venv $(V)
-	$(PIP) install -r requirements.txt
+	$(PIP) install --upgrade pip
+	$(PIP) install -r $(PWD)/requirements.txt
+	npm install
 
 pdf: $(PDF)
 
-$(NPM):
-	npm install
 
-$(PDF): upload-html $(NPM)
-	$(NODE) render-pdf.js $(PDF) https://i2p.rocks/cv.html
+$(PDF): node_modules $(HTML)
+	$(NODE) $(PWD)/render-pdf.js $(HTML) $(PDF)
 
-$(HTML): $(V) $(BUILD)
-	$(PY) render.py $(TMPL_HTML) $(HTML)
+$(HTML): $(V)
+	$(PY) $(PWD)/render.py $(HTML)
 
 clean:
-	rm -rf $(BUILD)
+	rm -rf $(HTML) $(PDF)
 
 distclean: clean
-	rm -rf $(V) $(NPM)
-
-upload: upload-pdf upload-html
-
-upload-html: $(HTML)
-	scp $(HTML) root@i2p.rocks:/var/www/html
-
-upload-pdf: $(PDF)
-	scp $(PDF) root@i2p.rocks:/var/www/html
+	rm -rf $(BUILD) $(PWD)/node_modules

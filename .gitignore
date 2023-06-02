@@ -2,14 +2,9 @@
 *~
 *\#*
 
-# rendered files
-*.html
-
-# virtual env
-v/
-
 # build dir
-dist
+build/
 
-# js bloat
-node_modules
+# nodejs bloat
+node_modules/
+
