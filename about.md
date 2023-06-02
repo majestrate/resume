@@ -1,12 +1,12 @@
 
 ## About me
 
-Life long Computer Programmer, hard working self-learner.
+Professional C++ software engineer.
 
 Prefers to align memory, not divs.
 
 ### Contact
 
-* Email:  `jeff@i2p.rocks`
-* XMPP:   `jeff@i2p.rocks`
+* Email:  `jeff@lokinet.io`
+* XMPP:   `jeff@lokinet.io`
 * [Github](https://github.com/majestrate)
