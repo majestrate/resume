@@ -1,6 +1,6 @@
 ### Experience
 
-* Full Time Full Remote Software developer for [OPTF](https://optf.ngo) working on mission critical privacy respecting infrastrucutre. (2018-2023)
+* Full Time Full Remote Software Engineer for [OPTF](https://optf.ngo) Creating Mission Critical Privacy Respecting Incentivised Internet Routing Infrastrucutre. (2018-2023)
 * C++ for Cryptography Heavy Software in FOSS (2016-present)
 * Backend Web Development in Go and Python using PostgreSQL in FOSS (2015-present)
 * Summer internship at clipfile.com (2015)
@@ -8,7 +8,7 @@
 
 #### Notable Contributions
 
-* Creator of [lokinet](https://github.com/oxen-io/lokinet) - DNS based IP packet Onion Router.
+* Creator of [lokinet](https://github.com/oxen-io/lokinet) - DNS Based IP Packet Onion Router.
 * Contributor to [i2pd](https://github.com/PurpleI2P/i2pd) - Packet Switched Onion Router.
 
 #### Language Proficiency
