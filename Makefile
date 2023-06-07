@@ -37,4 +37,4 @@ distclean: clean
 
 
 upload: compile
-	rsync --progress $(BUILD)/cv.* root@blog:/var/www/html/
+	rsync --progress $(BUILD)/cv.* root@blog:/var/www/lokinet-io/
