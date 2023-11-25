@@ -2,9 +2,7 @@
 *~
 *\#*
 
-# build dir
-build/
+/build/
+/node_modules/
 
-# nodejs bloat
-node_modules/
-
+/info.json

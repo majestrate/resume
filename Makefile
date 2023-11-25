@@ -1,6 +1,6 @@
 BUILD = $(PWD)/build
 HTML = $(BUILD)/cv.html
-PDF = $(BUILD)/cv.pdf
+PDF = $(BUILD)/JeffBecker.pdf
 V = $(BUILD)/v
 PY = $(V)/bin/python
 PIP = $(V)/bin/pip
@@ -37,4 +37,4 @@ distclean: clean
 
 
 upload: compile
-	rsync --progress $(BUILD)/cv.* root@blog:/var/www/lokinet-io/
+	rsync --progress $(HTML) $(PDF) root@blog:/var/www/lokinet-io/
