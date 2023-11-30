@@ -18,7 +18,7 @@ import json
 outfname = sys.argv[1]
 
 # set up jinja2 templates
-env = jinja2.Environment(loader=jinja2.FileSystemLoader("./templates"))
+env = jinja2.Environment(loader=jinja2.FileSystemLoader("templates"))
 
 settings = {}
 
@@ -26,20 +26,26 @@ with open('info.json') as f:
     settings = json.load(f)
 
 if settings['show_phone']:
+    p = settings['phone'] 
+    settings['phone_str'] = p[2:]
     for ch in '()-':
-        settings['phone'] = settings['phone'].replace(ch, '')
+        p = p.replace(ch, '')
+    settings['phone'] = p
 else:
+    settings['phone_str'] = ''
     settings['phone'] = ''
         
 parts = dict()
-for part_file in glob.glob("content/*.md"):
+for part_file in glob.glob("templates/*.jinja2"):
     with open(part_file) as f:
         part_file = part_file.split("/")[-1]
         part_name = part_file.split(".")[0]
+        if part_file.endswith('.html.jinja2'):
+            continue
         tmpl = env.get_template(f"{part_name}.md.jinja2")
         data = tmpl.render(**settings)
         parts[part_name] = markdown.markdown(data, output_format="html5")
-
+        
 
 html_template = env.get_template("out.html.jinja2")
 # render template with final html document containing rendered markdown

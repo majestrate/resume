@@ -1,66 +1,89 @@
-{% extends "base.jinja2" %}
+{% extends "base.html.jinja2" %}
 
 {% block overrideStyle %}
 
-  html, body {
-    font-family: sans-serif;
-  }
+	html, body {
+	font-family: sans-serif;
+	}
 
-  code, pre {
-    font-family: monospace;
-  }
+	code, pre {
+		font-family: monospace;
+	}
 
-  .container {
-    margin-left: 10%;
-    width: 65%;
-    display: flex;
-  }
+	.container {
+		margin-left: 10%;
+		width: 80%;
+		display: flex;
+	}
 
-  .content {
-    width: 85%;
-  }
+	.content {
+	z-index: 1;
+	width: 85%;
+	li {
+	font-size: 10pt;
+	}
+	}
 
-  li {
-    font-size: 8pt;
-  }
+		li {
+		font-size: 8pt;
+		}
 
-  img {
-    max-width: 200px;
-  }
+	.brief {
 
-  .header {
-    justify-content: center;
-    flex-direction: row;
-    padding-right: 3em;
-    width: 35%;
-  }
+	padding-bottom: 30px;
+	
+	}
 
-  .entry {
-    font-size: 10pt;
-  }
+	.desc {
+	font-size: 12pt;
+	font-face sans serif;
+	}
 
-  .footer {
-    color: grey;
-  }
+	.header {
+		justify-content: center;
+		flex-direction: row;
+		padding-right: 3em;
+		width: 35%;
+	}
+
+	.entry {
+		font-size: 10pt;
+	}
+
+	.footer {
+		color: grey;
+	}
+
+	.date {
+	font-size: 10pt;
+	color: #dedede;
+	font-style: italic;
+	}
+
+	.info {
+	font-size: 10pt;
+	color: grey;
+	}
 
 {% endblock %}
 
 
 {% block bodyContent %}
-<div class="container">
-  <div class="header">
-    <div class="entry">
-      {{header | safe }}
-    </div>
-    <div class="entry">
-      {{about | safe }}
-    </div>
-  </div>
-  <div class="content">
-    {{body | safe }}
-  </div>
-</div>
-<div class="footer">
-  {{footer | safe}}
-</div>
+	<!--
+		{{tos | safe}}
+		-->
+	<div class="container">
+		<div class="header">
+			<div class="entry">
+				{{header | safe }}
+			</div>
+			<div class="entry">
+			</div>
+		</div>
+		<div class="content">
+			{{body | safe }}
+		</div>
+	</div>
+	<div class="footer">
+	</div>
 {% endblock %}
